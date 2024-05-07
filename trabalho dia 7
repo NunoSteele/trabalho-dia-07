@@ -1,0 +1,88 @@
+nome = input("Digite seu nome: ")
+print("Olá", nome)
+
+itens = input("Digite itens separados por vírgula: ").split(',')
+print("Itens:", itens)
+
+idade = int(input("Digite sua idade: "))
+print("Daqui a cinco anos, você terá", idade + 5, "anos.")
+
+altura = float(input("Digite sua altura em metros: "))
+print("Sua altura é", altura, "metros.")
+
+
+def infinito():
+    print("Digite números para adicionar à lista (digite 'done' para terminar):")
+    numeros = []
+    while True:
+        entrada = input()
+        if entrada.lower() == 'done':
+            break
+        else:
+            numeros.append(int(entrada))
+    print("Números coletados:", numeros)
+    
+infinito()
+
+
+def questao1(nome, idade, cidade):
+    print("Nome", nome, sep=": ", end=" - ")
+    print("Idade", idade, sep=": ", end=" - ")
+    print("Cidade", cidade, sep=": ", end="!\n")   
+    
+questao1('Eduardo', 30, "Rio de Janeiro")
+questao1('Renata', 20, "Niterói")
+
+def questao2():
+    n1 = float(input("Entre com o primeiro número:"))
+    n2 = float(input("Entre com o segundo número:"))
+    op = input("Entre com a operação (+, -, *, ou /):")
+    
+    if op == '+':
+        r = n1 + n2
+    elif op == '-':
+        r = n1 - n2
+    elif op == '*':
+        r = n1 * n2
+    elif op == '/':
+        r = n1 / n2
+    else:
+        r = "operador desconhecido"
+    
+    print("resultado:", r)
+    
+# questao3()
+
+def questao3():
+    texto = input("Digite os itens da lista de compras separados por vírgulas:")
+    lista = texto.split(',')
+    
+    contador = 1
+    for item in lista:
+        print("Item ", contador, ": ", item, sep='')
+        contador += 1
+    
+#questao4()  
+
+def questao4():
+    celsius_texto = input("Entre com a temperatura em Celsius: ")
+    celsius = float(celsius_texto)
+
+    f = (celsius * 9/5) + 32
+    print("A temperatura em Fahrenheit é", f)    
+    
+
+#questao5()
+def questao5():
+    print("Entre com nomes. Digite sair para terminar. ")
+    nomes = []
+    
+    while True:
+        entrada = input()
+        if entrada.lower() == 'sair':
+            break
+        else:
+            nomes.append(entrada)
+
+    for nome in nomes:
+        print(nome)
